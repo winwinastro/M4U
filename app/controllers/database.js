@@ -23,7 +23,7 @@ connection.connect(function (err) {
         console.error('*** Error connecting: ' + err.stack);
     } else {
         console.log('Connected as ID: ' + connection.threadId);
-        connection.query('select * from Movie', function (err, result) {
+        connection.query('select count(*) from Movie', function (err, result) {
 
             // console.log(req.body);
             if (err) {
