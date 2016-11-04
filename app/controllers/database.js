@@ -2,11 +2,19 @@
 var mysql = require('mysql');
 
 //=== Local database connection
+// var connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     database: 'MovieSearch',
+//     password: 'tiva101'
+// });
+
+//=== Clear database connection
 var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
+    host: 'us-cdbr-iron-east-04.cleardb.net',
+    user: 'b036ac2e55f447',
     database: 'MovieSearch',
-    password: 'tiva101'
+    password: 'd0817784'
 });
 
 // Connect database
