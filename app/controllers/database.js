@@ -32,7 +32,6 @@ connection.connect(function (err) {
             else {
                 console.log(result);
             }
-
         });
     }
 });
