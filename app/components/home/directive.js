@@ -58,7 +58,7 @@ angular.module('app.directives.home', [])
 					});
 				};
 
-
+//
 			}]
 
 
