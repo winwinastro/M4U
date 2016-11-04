@@ -13,7 +13,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'us-cdbr-iron-east-04.cleardb.net',
     user: 'b036ac2e55f447',
-    database: 'MovieSearch',
+    database: 'heroku_85481808730d415',
     password: 'd0817784'
 });
 
