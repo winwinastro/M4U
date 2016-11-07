@@ -36,6 +36,20 @@ connection.connect(function (err) {
     }
 });
 
+// to prevent cleardb idle shutdown
+connection.on('err', function (err) {
+    if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+        connection.connect(function (err) {
+            if (err) {
+                console.error(" *** Error reconnecting: " + err.stack);
+            } else {
+                console.log("Reconnected as ID: " + connection.threadId);
+            }
+        })
+    }
+});
+
+
 // insert user
 exports.add_user = function (req, res) {
     var query = connection.query("Insert into user set ?", req.body, function (req, res) {
